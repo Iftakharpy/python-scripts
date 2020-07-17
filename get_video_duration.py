@@ -1,4 +1,5 @@
 import os
+import sys
 import moviepy.editor as movie
 
 # # Create an object by passing the location as a string
@@ -79,10 +80,12 @@ def get_total_duration(video_files):
     return total_duration
 print()
 try:
-    time = Convert_Time(get_total_duration(get_video_files()))
+    path = input('enter file path:\n')
+    time = Convert_Time(get_total_duration(get_video_files(path)))
     print(time)
     print(time.conversions())
 except OSError:
     pass
 
 input('')
+sys.exit(0)
