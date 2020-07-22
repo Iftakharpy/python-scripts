@@ -1,9 +1,4 @@
-import random
-
-
-
 class BstNode:
-
     def __init__(self, value=None):
         self.value = value
         self.right = None
@@ -79,8 +74,10 @@ class BstNode:
 
 
 #demo
+import random
+
 pretty_binary_tree = BstNode()
-for i in range(10000):
-    num = random.randint(0,100)
+for i in range(100):
+    num = random.randint(0,90)
     pretty_binary_tree.insert(num)
 pretty_binary_tree.display()
